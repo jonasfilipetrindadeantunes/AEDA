@@ -27,7 +27,7 @@ class Companhia {
 	vector<Passageiro> getPassageiros();				///vector de passageiros
 	vector<Voo> getVoos();								///vector de voos
 	vector<Reserva> getReservas();						///vector de reservas
-	//vector<Aviao> getAviao();
+	vector<Aviao> getAviao();
 
 	//PASSAGEIROS
 	void carregarPassageiros();							///carrega de um txt a lista de todos os passageiros da companhia socios e nao socios
@@ -50,9 +50,10 @@ class Companhia {
 
 
 	//VOOS
-	void carregarAvioes();								///lê avioes do ficheiro
+	void carregarAvioes();								///lÃª avioes do ficheiro
 	void addAviao(Aviao aviao);							///adiciona aviao
-	
+	void vertodosAvioes();
+
 
 
 	/*void setPrecoCompra(float precoOrig, bool socio, int mediavoos, int numLugaresDisp,	int numLugaresAviao, int horasAtePart);
