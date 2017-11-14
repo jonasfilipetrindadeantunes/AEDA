@@ -254,3 +254,43 @@ void Companhia::vertodasReservas()
 
 /////////////////////////////////////VOOS///////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
+
+
+void Companhia::carregarAvioes()
+{
+	ifstream inficheiro("avioes.txt");
+
+	string line;
+	string args[2];
+
+
+
+	while (getline(inficheiro, line))
+	{
+		string aviao;
+		int lugares;
+		stringstream linestream(line);
+		string value;
+		args->clear();
+
+		int i = 0;
+
+		while (getline(linestream, value, ';'))
+		{
+
+			args[i] = value;
+			i++;
+		}
+
+
+		aviao = args[0];
+		lugares = atoi(args[1].c_str());
+
+		Aviao a(aviao, lugares);
+		addAviao(a);
+
+	}
+}
+	void Companhia::addAviao(Aviao aviao){	
+		avioes.push_back(aviao);
+	}

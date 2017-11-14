@@ -13,8 +13,8 @@ private:
 public:
 
 	Date(unsigned int d, unsigned int m, unsigned int y,unsigned int h, unsigned int min);  //d=day, m=mes,y=ano,h=hora,min=minuto
-	~Date(){}
-	
+	//~Date(){}
+	Date();
 	unsigned int  getDay() const;
 	unsigned int  getMonth() const;
 	unsigned int getYear() const;

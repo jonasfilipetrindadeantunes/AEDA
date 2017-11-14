@@ -2,21 +2,33 @@
 #include <fstream>
 #include "Aviao.h"
 
-Aviao::Aviao(string modelo_aviao, unsigned int lugares){
-	this->modelo_aviao=modelo_aviao;
-	this->lugares_total=lugares;
+
+
+ int Aviao::getlugarestotal()
+ {
+	return lugarestotal;
 }
 
+ string Aviao::getModelo()
+ {
+	 return modeloaviao;
+ }
 
- int Aviao::getlugares_total(){
-	return lugares_total;
+ void Aviao::setLugares(int lugares)
+ {
+	 this->lugarestotal=lugares;
+
+ }
+
+ void Aviao::setModeloAviao(string modelo)
+ {
+	 this->modeloaviao=modelo;
+ }
+
+
+
+Aviao::Aviao(string modelo, int lugares)
+{
+	modeloaviao=modelo;
+	lugarestotal=lugares;
 }
-
-/*int Aviao::getvoos_feitos(){
-	return voos_feitos;
-}
-
-void Aviao::setVoos_feitos(unsigned int v){
-	this->voos_feitos=v;
-}*/
-

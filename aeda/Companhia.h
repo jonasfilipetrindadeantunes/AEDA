@@ -1,8 +1,11 @@
+#ifndef COMPANHIA_H
+#define COMPANHIA_H
+
 #include <iostream>
 #include "Reserva.h"
 #include "Voo.h"
 #include "Passageiro.h"
-//#include "Aviao.h"
+#include "Aviao.h"
 #include <vector>
 
 using namespace std;
@@ -13,7 +16,7 @@ class Companhia {
 	vector<Passageiro> passageiros;
 	vector<Voo> voos;
 	vector<Reserva> reservas;
-	//vector<Aviao> aviao;
+	vector<Aviao> avioes;
 
 	public:
 	Companhia ();
@@ -44,6 +47,11 @@ class Companhia {
 	void addReserva(Reserva reserv);
 	void vertodasReservas();
 
+
+
+	//VOOS
+	void carregarAvioes();								///lê avioes do ficheiro
+	void addAviao(Aviao aviao);							///adiciona aviao
 	
 
 
@@ -56,3 +64,4 @@ class Companhia {
 };
 
 
+#endif

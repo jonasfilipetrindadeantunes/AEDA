@@ -61,7 +61,7 @@ void Date::setHour(unsigned int h)
 	if (h < 0 || h > 23)
 		cerr << "The hour is invalid" << endl;
 	else
-	hour = h;
+	this->hour = h;
 
 }
 void Date::setMin(unsigned int min)
@@ -72,11 +72,20 @@ void Date::setMin(unsigned int min)
 	this->min = min;
 }
 
-Date::Date(unsigned int d,unsigned int m,unsigned int y, unsigned int h, unsigned int min)
+Date::Date(unsigned int d,unsigned int m,unsigned int y, unsigned int h, unsigned int minutos)
 {
-	setDay(d);
-	setMonth(m);
-	setYear(y);
-	setHour(h);
-	setMin(min);
+	day=d;
+	month=m;
+	year=y;
+	hour=h;
+	min=minutos;
+}
+
+Date::Date()
+{
+	this->day=0;
+	this->min=0;
+	this->hour=0;
+	this->year=0;
+	this->month=0;
 }
