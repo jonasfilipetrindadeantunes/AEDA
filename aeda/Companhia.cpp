@@ -41,6 +41,21 @@ vector<Aviao> Companhia::getAviao()
 	return avioes;
 
 }
+
+void Companhia::actualizartxt()
+{
+	ofstream passageiross;
+	passageiross.open("passageiros.txt",fstream::out|fstream::trunc);
+	
+	for(size_t i=0; i<passageiros.size();i++)
+	{
+	passageiross<<passageiros[i].getID()<<";"<<passageiros[i].getSocio()<<";"<<passageiros[i].getNome()<<";"<<passageiros[i].getProfissao()<<";"<<passageiros[i].getNascimento()<<";"<<passageiros[i].getMediavoos()<<endl;
+	}
+	passageiross.clear();
+	passageiross.close();
+
+
+}
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////PASSAGEIROS/////////////////////////////////////
 
