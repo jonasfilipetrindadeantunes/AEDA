@@ -22,7 +22,7 @@ class Companhia {
 	Companhia ();
 	~Companhia ();
 
-
+	void actualizartxt();
 	string getNome() const;
 	vector<Passageiro> getPassageiros();				///vector de passageiros
 	vector<Voo> getVoos();								///vector de voos
