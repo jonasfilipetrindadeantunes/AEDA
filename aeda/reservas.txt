@@ -1,0 +1,5 @@
+12345;230;0;lisboa;porto;0
+1245;2310;0;lisboa;port;0
+1245;2350;0;lisboa;por;0
+12345;20;0;lisboa;po;0
+1245;230;0;liboa;porto;0
