@@ -1,0 +1,9 @@
+Airbus A300;300
+Airbus A310;100
+Airbus A318;100
+Airbus A319;300
+Airbus A320;100
+Airbus A321;300
+Airbus A330;100
+Airbus A340;300
+Airbus A350;300
