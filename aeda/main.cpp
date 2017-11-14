@@ -108,6 +108,7 @@ void menu()
 		avioes();
 		break;
 	case 4:
+		c.actualizartxt();
 		exit(1);
 	}
 
