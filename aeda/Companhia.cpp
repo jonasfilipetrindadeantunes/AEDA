@@ -35,6 +35,12 @@ vector<Reserva> Companhia::getReservas()
 {
 	return reservas;
 }
+
+vector<Aviao> Companhia::getAviao()
+{
+	return avioes;
+
+}
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////PASSAGEIROS/////////////////////////////////////
 
@@ -255,7 +261,6 @@ void Companhia::vertodasReservas()
 /////////////////////////////////////VOOS///////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
-
 void Companhia::carregarAvioes()
 {
 	ifstream inficheiro("avioes.txt");
@@ -287,10 +292,28 @@ void Companhia::carregarAvioes()
 		lugares = atoi(args[1].c_str());
 
 		Aviao a(aviao, lugares);
+		a.setModeloAviao(aviao);
+		a.setLugares(lugares);
+
 		addAviao(a);
 
 	}
 }
-	void Companhia::addAviao(Aviao aviao){	
+
+void Companhia::addAviao(Aviao aviao)
+{	
 		avioes.push_back(aviao);
+}
+
+void Companhia::vertodosAvioes()
+{
+
+	for (size_t i=0; i<avioes.size(); i++)
+	{
+		cout<<"\nModelo de aviao\t\tNumero de lugares"<<endl;
+		cout<<avioes[i].getModelo()<<"\t\t"<<avioes[i].getlugarestotal()<<endl;
+
 	}
+
+
+}
